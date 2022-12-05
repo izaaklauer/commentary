@@ -1,6 +1,6 @@
-# %%wp_project%%
+# commentary
 
-%%wp_project_description%%
+serves my company's website comments
 
 ### First clone
 
@@ -13,8 +13,8 @@ Start your server with `make serve`
 ```
 $ make serve
 
-go run cmd/%%wp_project%%-api/main.go config/config_local.hcl
-starting %%wp_project%%.......
+go run cmd/commentary-api/main.go config/config_local.hcl
+starting commentary.......
 2022/12/02 20:58:46 Serving on "localhost:8080"
 
 ```
@@ -22,10 +22,10 @@ starting %%wp_project%%.......
 Then send a request via grpcurl:
 
 ```
-$ grpcurl -plaintext -d '{"message": "hello from local development"}' localhost:8080 %%wp_project%%.v1.%%Wp_project%%Service/HelloWorld
+$ grpcurl -plaintext -d '{"message": "hello from local development"}' localhost:8080 commentary.v1.CommentaryService/HelloWorld
 
 {
-  "configMessage": "hello from %%wp_project%%",
+  "configMessage": "hello from commentary",
   "requestMessage": "hello from local development",
   "now": "2022-12-03T02:01:19.505743Z"
 }
